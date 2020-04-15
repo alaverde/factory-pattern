@@ -18,13 +18,14 @@ class Monitor {
             displaySizeInches,
             tecnology,
             refreshRate,
-            resolution
+            resolution,
+            horizontalResolution,
+            verticalResolution
         }
     }
 
     displaySpecifications(){
         console.log(this.specifications);
-        console.log(this.divideVHResolution());
     }
 
     multiplyVHResolution(){
