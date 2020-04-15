@@ -5,9 +5,13 @@ class Monitor {
         displaySizeInches = 50,
         tecnology = "OLED",
         refreshRate = "240Hz",
-        resolution = "4K UHD 2160p"
+        resolution = "4K UHD 2160p",
+        horizontalResolution = 3840,
+        verticalResolution = 2160
     ){
         this.serial = serial;
+        this.horizontalResolution = horizontalResolution;
+        this.verticalResolution = verticalResolution;
         this.specifications = {
             serial,
             brand,
@@ -20,6 +24,15 @@ class Monitor {
 
     displaySpecifications(){
         console.log(this.specifications);
+        console.log(this.divideVHResolution());
+    }
+
+    multiplyVHResolution(){
+        return this.verticalResolution * this.horizontalResolution;
+    }
+
+    divideVHResolution(){
+        return this.verticalResolution / this.horizontalResolution;
     }
 }
 

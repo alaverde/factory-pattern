@@ -6,6 +6,8 @@ const samsungMonitor = new Monitor(
         49.9,
         "LED",
         "144Hz",
-        "UHD");
+        "UHD",
+        3840,
+        2160);
 
 samsungMonitor.displaySpecifications();
