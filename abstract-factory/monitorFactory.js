@@ -5,9 +5,11 @@ class MonitorFactory {
     create(brand, serial){
         switch(brand){
             case 'samsung':
-                return new Samsung(serial);
+                const samsung = new Samsung(serial);
+                return samsung.multiplyVHResolution();
             case 'lg':
-                return new Lg(serial);
+                const lg = new Lg(serial);
+                return lg.divideVHResolution();
             default: {
                 console.log('Monitor not found');
             }
